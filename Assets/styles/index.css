@@ -1,0 +1,466 @@
+@font-face {
+  font-family: "Inter-Extra-bold";
+  src: url(../fonts/Inter-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url(../fonts/Merriweather-Light.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:focus {
+  outline-color: rgb(155, 155, 155);
+}
+
+body {
+  background: url("../images/bg.jpg") fixed center/cover;
+  font-family: "Merriweather-Light";
+}
+
+h1, h2, h3, a {
+  font-family: "Inter-Extra-bold";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+header div {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 1100px;
+  text-align: center;
+}
+header div h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-size: 7rem;
+  margin-bottom: 2rem;
+}
+header div p {
+  color: white;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 5rem;
+}
+header div button {
+  background-color: transparent;
+  height: 75px;
+  width: 75px;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+header div button a {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header div button a i {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+}
+header nav {
+  position: absolute;
+  bottom: 0;
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.301);
+  height: 5rem;
+}
+header nav div {
+  margin: 0;
+}
+header nav div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav div ul li a {
+  color: white;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav div ul li a:hover {
+  color: black;
+  background-color: rgb(245, 245, 245);
+}
+header nav div ul li a i {
+  font-size: 1.7rem;
+}
+
+.section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  max-width: 80vw;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.section1 div {
+  width: 80%;
+}
+.section1 div p.before {
+  margin: 3rem auto;
+  position: relative;
+  width: 80%;
+}
+.section1 div p.before::before {
+  content: "";
+  height: 2px;
+  background: rgb(231, 230, 230);
+  width: 40%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.section1 div p.before::after {
+  content: "";
+  height: 2px;
+  background: rgb(231, 230, 230);
+  width: 40%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.section1 div h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.section1 div :nth-child(3) {
+  width: 60%;
+  margin: 0 auto;
+  font-style: italic;
+  line-height: 40px;
+}
+.section1 div .img1 {
+  height: 60vh;
+  display: block;
+  margin: 3rem auto 5rem;
+  background: url(/Assets/images/pic01.jpg) bottom/cover;
+}
+
+.section2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  height: 100vh;
+  width: 80vw;
+  text-align: center;
+  margin: 0 auto;
+  border-top: 2px solid rgb(245, 245, 245);
+}
+.section2 div {
+  padding: 20px;
+  width: 50%;
+  border-right: 2px solid rgb(245, 245, 245);
+  height: 100%;
+}
+.section2 div p {
+  margin: 3rem auto 2rem;
+}
+.section2 div h2 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+.section2 div .img2-1 {
+  height: 30vh;
+  width: 30vw;
+  background: url(/Assets/images/pic02.jpg) center/cover;
+  margin: 0 auto;
+}
+.section2 div .img2-1 + p {
+  width: 30vw;
+  text-align: left;
+  line-height: 30px;
+}
+.section2 div .img2-2 {
+  height: 30vh;
+  width: 30vw;
+  background: url(/Assets/images/pic03.jpg) center/cover;
+  margin: 0 auto;
+}
+.section2 div .img2-2 + p {
+  width: 30vw;
+  text-align: left;
+  line-height: 30px;
+}
+
+.foot2 {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.foot2 div {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 0 0 0 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border-bottom: 2px solid rgba(213, 213, 213, 0.39);
+}
+.foot2 div h3 {
+  font-family: "Inter-Extra-bold";
+  color: rgb(129, 129, 129);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.foot2 div p {
+  width: 60%;
+  color: rgb(129, 129, 129);
+  font-size: 0.8rem;
+}
+.foot2 div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.foot2 div ul li {
+  border: 1px solid rgb(213, 213, 213);
+  width: 50px;
+  height: 50px;
+  border-radius: 55px;
+  margin-right: 20px;
+}
+.foot2 div ul li a {
+  font-size: 22px;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.foot2 div ul li a:visited {
+  color: black;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+button a.button {
+  display: inline-block;
+  padding: 10px 45px;
+  color: black;
+  border: 2px solid black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 1rem auto 3rem;
+}
+
+footer {
+  max-width: 80vw;
+  background-color: rgb(245, 245, 245);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+  height: 70vh;
+}
+footer .foot1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  border-right: 2px solid rgba(213, 213, 213, 0.39);
+}
+footer .foot1 form {
+  width: 80%;
+  margin: 0 auto;
+}
+footer .foot1 form ul {
+  width: 100%;
+  margin: 0 auto;
+}
+footer .foot1 form ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+footer .foot1 form ul li label {
+  text-align: left;
+  margin: 1.5rem 0;
+  font-family: "Inter-Extra-bold";
+  color: rgb(129, 129, 129);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+footer .foot1 form ul li input, footer .foot1 form ul li textarea {
+  max-width: 1100px;
+  width: 85%;
+  height: 3rem;
+  border-radius: 5px;
+  border: 1px solid rgb(213, 213, 213);
+  background: none;
+}
+footer .foot1 form ul li input:hover, footer .foot1 form ul li textarea:hover {
+  border-color: rgb(155, 155, 155);
+}
+footer .foot1 form ul li textarea {
+  height: 85%;
+  resize: none;
+  margin-bottom: 1.5rem;
+}
+footer .foot1 form ul li #submit {
+  display: inline-block;
+  border: 2px solid black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 0;
+  max-width: 200px;
+  font-family: "Inter-Extra-bold";
+  color: rgb(129, 129, 129);
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}/*# sourceMappingURL=index.css.map */

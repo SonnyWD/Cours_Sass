@@ -1,0 +1,102 @@
+.section1 {
+    @include DflexCol;
+    background-color: $white;
+    max-width: 80vw;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: start;
+    div {
+        width: 80%;
+         p.before {
+            margin: 3rem auto;
+            position: relative;
+            width: 80%;
+            &::before {
+                content:"";
+                height: 2px;
+                background: rgb(231, 230, 230);
+                width: 40%;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                       }
+            &::after {
+                content:"";
+                height: 2px;
+                background: rgb(231, 230, 230);
+                width: 40%;
+                position: absolute;
+                right: 0;
+                top: 50%;
+            }
+        }
+        h2 {
+            text-transform: uppercase;
+            font-size: 4rem;
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+        :nth-child(3) {
+            width: 60%;
+            margin: 0 auto;
+            font-style: italic;
+            line-height: 40px;
+        }
+        .img1 {
+            height: 60vh;
+            display: block;
+            margin: 3rem auto 5rem;
+            background: url(/Assets/images/pic01.jpg) bottom/cover;
+        }
+    }
+    
+}
+.section2 {
+    @include Dflex;
+    background-color: $white;
+    height: 100vh;
+    width: 80vw;
+    text-align: center;
+    margin: 0 auto;
+    border-top: 2px solid $color1;
+    div {
+        padding:20px;
+        width: 50%;
+        border-right: 2px solid $color1;
+        height: 100%;
+        p {
+            margin: 3rem auto 2rem;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            width: 40%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+        .img2-1 {
+            height: 30vh;
+            width: 30vw;
+            background: url(/Assets/images/pic02.jpg) center/cover;
+            margin: 0 auto;
+            + p {
+                width: 30vw;
+                text-align: left;
+                line-height: 30px;
+            }
+        }
+        .img2-2 {
+            height: 30vh;
+            width: 30vw;
+            background: url(/Assets/images/pic03.jpg) center/cover;
+            margin: 0 auto;
+            + p {
+                width: 30vw;
+                text-align: left;
+                line-height: 30px;
+            }
+        }
+    }
+}

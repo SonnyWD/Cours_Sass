@@ -1,0 +1,46 @@
+$color1: rgb(245, 245, 245);
+$white: white;
+$black: black;
+
+@mixin Dflex {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin DflexCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@font-face {
+    font-family: "Inter-Extra-bold";
+    src: url(../fonts/Inter-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Merriweather-Light";
+    src: url(../fonts/Merriweather-Light.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &:focus {
+        outline-color: rgb(155, 155, 155);
+    }
+    
+}
+body {
+    background: url("../images/bg.jpg") fixed center/cover;
+    font-family:"Merriweather-Light" ;
+}
+h1, h2, h3, a {
+    font-family: "Inter-Extra-bold";
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    
+}

@@ -1,0 +1,72 @@
+header {
+    height: 100vh;
+    @include DflexCol;
+    position: relative;
+    div {
+        display: inline-block;
+        margin: 0 auto;
+        max-width: 1100px;
+        text-align: center;
+        h1 {
+            color: $white;
+            text-transform: uppercase;
+            letter-spacing: 7px;
+            font-size: 7rem;
+            margin-bottom: 2rem;
+        }
+        p {
+            color: $white;
+            font-style: italic;
+            font-size: 1rem;
+            margin-bottom: 5rem;
+        }
+        button {
+            background-color: transparent;
+            height: 75px;
+            width: 75px;
+            border-radius: 50px;
+            border: 2px solid $white;
+                a {
+                   height:100%;
+                   @include Dflex;
+                   justify-content: center;
+                   i {
+                    display: inline-block;
+                    font-size: 1.5rem;
+                    color: $white;
+                   }
+                }
+        }
+        
+    }
+    nav {
+        position:absolute;
+        bottom: 0;
+        width: 80vw;
+        @include Dflex;
+        background-color: rgba(255, 255, 255, 0.301);
+        height: 5rem;
+        div {
+            margin: 0;
+            ul { @include Dflex;
+                li {
+                    a {
+                        color: $white;
+                        padding: 0 2rem;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        height: 5rem;
+                        @include Dflex;
+                        &:hover {
+                            color:$black;
+                            background-color: $color1;
+                        }
+                        i {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

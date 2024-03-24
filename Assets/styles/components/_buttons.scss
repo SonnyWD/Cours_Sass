@@ -1,0 +1,13 @@
+ button{
+    background-color: transparent;
+    border: none;
+    a.button {
+        display: inline-block;
+        padding: 10px 45px;
+        color: $black;
+        border: 2px solid $black;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 1rem auto 3rem;
+ } 
+}
