@@ -25,6 +25,7 @@ $black: black;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     &:focus {
         outline-color: rgb(155, 155, 155);
     }
@@ -42,5 +43,4 @@ li {
 }
 a {
     text-decoration: none;
-    
 }

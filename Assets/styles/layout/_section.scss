@@ -5,6 +5,9 @@
     text-align: center;
     margin: 0 auto;
     justify-content: start;
+    @media screen and (max-width:600px) {
+        max-width: 90vw;
+    }
     div {
         width: 80%;
          p.before {
@@ -19,6 +22,9 @@
                 position: absolute;
                 left: 0;
                 top: 50%;
+                @media screen and (max-width:900px) {
+                    width: 30%;
+                }
                        }
             &::after {
                 content:"";
@@ -28,6 +34,9 @@
                 position: absolute;
                 right: 0;
                 top: 50%;
+                @media screen and (max-width:900px) {
+                    width: 30%;
+                }
             }
         }
         h2 {
@@ -36,6 +45,10 @@
             width: 60%;
             margin: 0 auto;
             margin-bottom: 2rem;
+            @media screen and (max-width:900px) {
+                font-size: 3rem;
+                width: 80%;
+            }
         }
         :nth-child(3) {
             width: 60%;
@@ -60,11 +73,22 @@
     text-align: center;
     margin: 0 auto;
     border-top: 2px solid $color1;
+    @media screen and (max-width:900px) {
+        @include DflexCol;
+        height: 100%;
+    }
+    @media screen and (max-width:600px) {
+       width: 90vw;
+    }
     div {
         padding:20px;
         width: 50%;
         border-right: 2px solid $color1;
         height: 100%;
+        @media screen and (max-width:900px) {
+            border: none;
+            width: 80%;
+        }
         p {
             margin: 3rem auto 2rem;
         }
@@ -75,16 +99,25 @@
             margin: 0 auto;
             margin-bottom: 2rem;
             letter-spacing: 2px;
+            @media screen and (max-width:900px) {
+                width: 70%;
+            }
         }
         .img2-1 {
             height: 30vh;
             width: 30vw;
             background: url(/Assets/images/pic02.jpg) center/cover;
             margin: 0 auto;
+            @media screen and (max-width:900px) {
+                width: 90%;
+            }
             + p {
                 width: 30vw;
                 text-align: left;
                 line-height: 30px;
+                @media screen and (max-width:900px) {
+                    width: 90%;
+                }
             }
         }
         .img2-2 {
@@ -92,10 +125,16 @@
             width: 30vw;
             background: url(/Assets/images/pic03.jpg) center/cover;
             margin: 0 auto;
+            @media screen and (max-width:900px) {
+                width: 90%;
+            }
             + p {
                 width: 30vw;
                 text-align: left;
                 line-height: 30px;
+                @media screen and (max-width:900px) {
+                    width: 90%;
+                }
             }
         }
     }

@@ -9,5 +9,9 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         margin: 1rem auto 3rem;
+        &:hover {
+            color:$white;
+            background-color: $black;
+        }
  } 
 }

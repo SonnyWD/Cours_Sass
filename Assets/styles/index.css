@@ -10,7 +10,8 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *:focus {
   outline-color: rgb(155, 155, 155);
@@ -21,7 +22,10 @@ body {
   font-family: "Merriweather-Light";
 }
 
-h1, h2, h3, a {
+h1,
+h2,
+h3,
+a {
   font-family: "Inter-Extra-bold";
 }
 
@@ -40,14 +44,14 @@ header {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
 header div {
@@ -63,11 +67,30 @@ header div h1 {
   font-size: 7rem;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 900px) {
+  header div h1 {
+    font-size: 4rem;
+    width: 80%;
+    margin: 1rem auto 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  header div h1 {
+    font-size: 2.5rem;
+    width: 90%;
+  }
+}
 header div p {
   color: white;
   font-style: italic;
   font-size: 1rem;
   margin-bottom: 5rem;
+}
+@media screen and (max-width: 900px) {
+  header div p {
+    width: 80%;
+    margin: 1rem auto 3rem;
+  }
 }
 header div button {
   background-color: transparent;
@@ -76,20 +99,24 @@ header div button {
   border-radius: 50px;
   border: 2px solid white;
 }
+header div button:hover {
+  border-color: black;
+  background-color: black;
+}
 header div button a {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 header div button a i {
   display: inline-block;
@@ -104,27 +131,37 @@ header nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.301);
   height: 5rem;
 }
+@media screen and (max-width: 600px) {
+  header nav {
+    width: 90vw;
+  }
+}
 header nav div {
   margin: 0;
+}
+@media screen and (max-width: 900px) {
+  header nav div .social-nav {
+    display: none;
+  }
 }
 header nav div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 header nav div ul li a {
   color: white;
@@ -136,11 +173,22 @@ header nav div ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media screen and (max-width: 1100px) {
+  header nav div ul li a {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 1100px) and (max-width: 600px) {
+  header nav div ul li a {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
 }
 header nav div ul li a:hover {
   color: black;
@@ -156,21 +204,26 @@ header nav div ul li a i {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: white;
   max-width: 80vw;
   text-align: center;
   margin: 0 auto;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+@media screen and (max-width: 600px) {
+  .section1 {
+    max-width: 90vw;
+  }
 }
 .section1 div {
   width: 80%;
@@ -189,6 +242,11 @@ header nav div ul li a i {
   left: 0;
   top: 50%;
 }
+@media screen and (max-width: 900px) {
+  .section1 div p.before::before {
+    width: 30%;
+  }
+}
 .section1 div p.before::after {
   content: "";
   height: 2px;
@@ -198,12 +256,23 @@ header nav div ul li a i {
   right: 0;
   top: 50%;
 }
+@media screen and (max-width: 900px) {
+  .section1 div p.before::after {
+    width: 30%;
+  }
+}
 .section1 div h2 {
   text-transform: uppercase;
   font-size: 4rem;
   width: 60%;
   margin: 0 auto;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 900px) {
+  .section1 div h2 {
+    font-size: 3rem;
+    width: 80%;
+  }
 }
 .section1 div :nth-child(3) {
   width: 60%;
@@ -223,11 +292,11 @@ header nav div ul li a i {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: white;
   height: 100vh;
   width: 80vw;
@@ -235,11 +304,40 @@ header nav div ul li a i {
   margin: 0 auto;
   border-top: 2px solid rgb(245, 245, 245);
 }
+@media screen and (max-width: 900px) {
+  .section2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section2 {
+    width: 90vw;
+  }
+}
 .section2 div {
   padding: 20px;
   width: 50%;
   border-right: 2px solid rgb(245, 245, 245);
   height: 100%;
+}
+@media screen and (max-width: 900px) {
+  .section2 div {
+    border: none;
+    width: 80%;
+  }
 }
 .section2 div p {
   margin: 3rem auto 2rem;
@@ -252,16 +350,31 @@ header nav div ul li a i {
   margin-bottom: 2rem;
   letter-spacing: 2px;
 }
+@media screen and (max-width: 900px) {
+  .section2 div h2 {
+    width: 70%;
+  }
+}
 .section2 div .img2-1 {
   height: 30vh;
   width: 30vw;
   background: url(/Assets/images/pic02.jpg) center/cover;
   margin: 0 auto;
 }
+@media screen and (max-width: 900px) {
+  .section2 div .img2-1 {
+    width: 90%;
+  }
+}
 .section2 div .img2-1 + p {
   width: 30vw;
   text-align: left;
   line-height: 30px;
+}
+@media screen and (max-width: 900px) {
+  .section2 div .img2-1 + p {
+    width: 90%;
+  }
 }
 .section2 div .img2-2 {
   height: 30vh;
@@ -269,10 +382,20 @@ header nav div ul li a i {
   background: url(/Assets/images/pic03.jpg) center/cover;
   margin: 0 auto;
 }
+@media screen and (max-width: 900px) {
+  .section2 div .img2-2 {
+    width: 90%;
+  }
+}
 .section2 div .img2-2 + p {
   width: 30vw;
   text-align: left;
   line-height: 30px;
+}
+@media screen and (max-width: 900px) {
+  .section2 div .img2-2 + p {
+    width: 90%;
+  }
 }
 
 .foot2 {
@@ -282,18 +405,30 @@ header nav div ul li a i {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   height: 100%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .foot2 {
+    width: 90%;
+  }
 }
 .foot2 div {
   display: grid;
   grid-template-columns: 30% 70%;
-  padding: 0 0 0 30px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%;
   border-bottom: 2px solid rgba(213, 213, 213, 0.39);
+}
+@media screen and (max-width: 900px) {
+  .foot2 div {
+    width: 90%;
+    border-top: 2px solid rgba(213, 213, 213, 0.39);
+    border-bottom: none;
+    margin: 1rem 0;
+  }
 }
 .foot2 div h3 {
   font-family: "Inter-Extra-bold";
@@ -301,6 +436,12 @@ header nav div ul li a i {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 0.8rem;
+  margin: 0 0 0 30px;
+}
+@media screen and (max-width: 1000px) {
+  .foot2 div h3 {
+    margin: 0 0 0 10px;
+  }
 }
 .foot2 div p {
   width: 60%;
@@ -312,14 +453,14 @@ header nav div ul li a i {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 .foot2 div ul li {
   border: 1px solid rgb(213, 213, 213);
@@ -327,6 +468,16 @@ header nav div ul li a i {
   height: 50px;
   border-radius: 55px;
   margin-right: 20px;
+}
+@media screen and (max-width: 900px) {
+  .foot2 div ul li {
+    width: 30px;
+    height: 30px;
+  }
+}
+.foot2 div ul li:hover {
+  border-color: black;
+  background-color: black;
 }
 .foot2 div ul li a {
   font-size: 22px;
@@ -337,17 +488,25 @@ header nav div ul li a i {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .foot2 div ul li a {
+    font-size: 0.8rem;
+  }
 }
 .foot2 div ul li a:visited {
   color: black;
+}
+.foot2 div ul li a:hover {
+  color: white;
 }
 
 button {
@@ -363,6 +522,10 @@ button a.button {
   letter-spacing: 1px;
   margin: 1rem auto 3rem;
 }
+button a.button:hover {
+  color: white;
+  background-color: black;
+}
 
 footer {
   max-width: 80vw;
@@ -372,13 +535,32 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 3rem;
   height: 70vh;
+}
+@media screen and (max-width: 900px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    max-width: 90vw;
+  }
 }
 footer .foot1 {
   display: -webkit-box;
@@ -386,20 +568,26 @@ footer .foot1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   width: 50%;
   height: 100%;
   border-right: 2px solid rgba(213, 213, 213, 0.39);
+}
+@media screen and (max-width: 900px) {
+  footer .foot1 {
+    border-right: none;
+    width: 90%;
+  }
 }
 footer .foot1 form {
   width: 80%;
@@ -415,17 +603,17 @@ footer .foot1 form ul li {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 footer .foot1 form ul li label {
   text-align: left;
@@ -436,7 +624,8 @@ footer .foot1 form ul li label {
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-footer .foot1 form ul li input, footer .foot1 form ul li textarea {
+footer .foot1 form ul li input,
+footer .foot1 form ul li textarea {
   max-width: 1100px;
   width: 85%;
   height: 3rem;
@@ -444,7 +633,8 @@ footer .foot1 form ul li input, footer .foot1 form ul li textarea {
   border: 1px solid rgb(213, 213, 213);
   background: none;
 }
-footer .foot1 form ul li input:hover, footer .foot1 form ul li textarea:hover {
+footer .foot1 form ul li input:hover,
+footer .foot1 form ul li textarea:hover {
   border-color: rgb(155, 155, 155);
 }
 footer .foot1 form ul li textarea {
@@ -463,4 +653,14 @@ footer .foot1 form ul li #submit {
   color: rgb(129, 129, 129);
   font-size: 0.8rem;
   margin-top: 1.5rem;
-}/*# sourceMappingURL=index.css.map */
+  cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  footer .foot1 form ul li #submit {
+    margin-bottom: 1.5rem;
+  }
+}
+footer .foot1 form ul li #submit:hover {
+  color: white;
+  background-color: black;
+} /*# sourceMappingURL=index.css.map */
