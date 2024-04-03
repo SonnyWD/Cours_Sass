@@ -284,7 +284,7 @@ header nav div ul li a i {
   height: 60vh;
   display: block;
   margin: 3rem auto 5rem;
-  background: url("/Assets/images/pic01.jpg") bottom/cover;
+  background: url("../images/pic01.jpg") bottom/cover;
 }
 
 .section2 {
