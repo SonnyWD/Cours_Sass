@@ -284,7 +284,7 @@ header nav div ul li a i {
   height: 60vh;
   display: block;
   margin: 3rem auto 5rem;
-  background: url(/Assets/images/pic01.jpg) bottom/cover;
+  background: url("../images/pic01.jpg") bottom/cover;
 }
 
 .section2 {
@@ -358,7 +358,7 @@ header nav div ul li a i {
 .section2 div .img2-1 {
   height: 30vh;
   width: 30vw;
-  background: url(/Assets/images/pic02.jpg) center/cover;
+  background: url("../images/pic02.jpg") center/cover;
   margin: 0 auto;
 }
 @media screen and (max-width: 900px) {
@@ -379,7 +379,7 @@ header nav div ul li a i {
 .section2 div .img2-2 {
   height: 30vh;
   width: 30vw;
-  background: url(/Assets/images/pic03.jpg) center/cover;
+  background: url("../images/pic03.jpg") center/cover;
   margin: 0 auto;
 }
 @media screen and (max-width: 900px) {
